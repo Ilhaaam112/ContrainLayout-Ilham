@@ -1,0 +1,93 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Toko Penjualan Motor Hamzzz"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/descriptionTextView"/>
+
+
+    <!-- Ganti dengan nama gambar yang Anda gunakan --><![CDATA[
+    app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp"
+    android:scaleType="centerCrop"/>
+
+    ]]>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Temukan motor impian Anda di sini! Kami menawarkan berbagai jenis motor dengan harga terbaik."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="377dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/motorImageView">
+
+        <Button
+            android:id="@+id/viewMotorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lihat Motor"
+            app:backgroundTint="#21D0AD"
+            app:layout_constraintEnd_toStartOf="@+id/orderMotorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <Button
+            android:id="@+id/contactButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Kontak Kami"
+            app:backgroundTint="#21CEAB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/orderMotorButton"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <Button
+            android:id="@+id/orderMotorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pesan Motor"
+            app:backgroundTint="#21CFAC"
+            app:layout_constraintWidth_percent="0.3"
+            tools:layout_editor_absoluteX="130dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/motorImageView"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:src="@drawable/motor"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="169dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
